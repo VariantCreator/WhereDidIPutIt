@@ -1,0 +1,7 @@
+{
+  "name": "WhereDidIPutIt",
+  "version_number": "0.1.2",
+  "website_url": "https://github.com/VariantCreator/WhereDidIPutIt",
+  "description": "Find items in remembered chests, backpacks and on the ground. Local pings, map locations and personal history. Client-side beta, provided as-is.",
+  "dependencies": ["denikson-BepInExPack_Valheim-5.4.2351"]
+}

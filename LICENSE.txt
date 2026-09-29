@@ -1,0 +1,9 @@
+Copyright 2026 VariantMods. All rights reserved.
+
+Permission is granted to download and use the compiled Where Did I Put It?
+mod for personal play and to include the unmodified release package in
+Valheim modpacks with attribution to VariantMods.
+
+This beta is provided as-is, without warranty of any kind. Implementation
+source, project files and development materials are not included or licensed
+for redistribution by this notice.

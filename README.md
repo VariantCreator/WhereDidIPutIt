@@ -2,7 +2,7 @@
 
 Find where you left something. Search remembered storage, nearby dropped items, backpacks and recent item movements without leaving Valheim.
 
-**Beta 0.1.2. Provided as-is.**
+**Version 0.1.2. Provided as-is.**
 
 ## Getting started
 

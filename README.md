@@ -1,43 +1,83 @@
-# Where Did I Put It?
+# 🔎 Where Did I Put It?
+### Find the chest. Follow the trail.
 
-Find where you left something. Search remembered storage, nearby dropped items, backpacks and recent item movements without leaving Valheim.
+Search remembered storage, nearby dropped items, backpacks and recent item movements without leaving Valheim.
 
-**Version 0.1.2. Provided as-is.**
+**Version 0.1.2 · Client-only · No server installation needed**
 
-## Getting started
+## 📦 Install
 
-Install on your own PC through your mod manager, or place `WhereDidIPutIt.dll` in `BepInEx/plugins/WhereDidIPutIt/`. Requires BepInExPack Valheim. A server installation is not required.
+Requires **BepInExPack Valheim**.
 
-Join a world and open the chests you want to remember. Close the inventory, then press **Left Ctrl + F9** to search.
+Install on your own PC through your mod manager, or place `WhereDidIPutIt.dll` in `BepInEx/plugins/WhereDidIPutIt/`.
 
-- **Last locations** shows matching items in remembered containers, on the ground and in your carried inventories.
-- **Observed history** shows transfers and other item changes your client observed.
-- **Locate local** closes the menu and pings a nearby remembered chest or dropped item with a pulsing gold ring and floating marker for 12 seconds.
-- **View map** opens your map at the selected location, with a highlighted marker for 90 seconds. If the chest or item is loaded nearby, the marker follows its current position; otherwise it shows the last recorded location.
-- Press **Escape**, the shortcut, or the close button to return to the game.
+[📥 Downloads](https://github.com/VariantCreator/WhereDidIPutIt/releases)
 
-The menu uses a Valheim-inspired wood and bronze frame with warm gold text. Search by item, container type, or action. Names follow the game's language where available. Change the shortcut, window scale, local ping duration, history limits and observation distance in `BepInEx/config/VariantMods.WhereDidIPutIt.cfg` or a configuration manager.
+## 🚀 Get started
 
-## Remembered locations
+1. Join a world and **open the chests you want to remember**.
+2. Close the inventory and press **Left Ctrl + F9**.
+3. Search by **item, container type or action**.
 
-Every storage result is a last-seen record. Other players, automatic storage, moving boats, world resets and events while you were offline can change what is there. Open a container again to refresh it. A remembered location is not proof of who moved an item.
+Names follow the game's language where available. Press **Escape**, the shortcut or the close button to return to the game.
 
-The mod records containers you open or use through observed transfers. It refreshes known, accessible containers nearby. It does not search unopened storage across the world. History begins when the mod is installed.
+## 🗂️ Find your last locations
 
-Nearby dropped items appear as **Ground** locations. Their recorded position updates as they roll or float. Your successful pickups remove that ground location. Other players, automatic stacking and despawning can leave an old record; last-seen ground locations are not a promise that the item is still there. Ground locations are kept for up to one real day, with a limit of 300.
+- **Last locations** — Matching items in remembered containers, on the ground and in your carried inventories.
+- **Observed history** — Transfers and other item changes your client observed.
+- **Locate local** — Closes the menu and marks a nearby remembered chest or dropped item with a pulsing gold ring and floating marker.
+- **View map** — Opens the map at the selected location with a highlighted marker.
 
-Your character and each world have separate local histories. These files are kept under `BepInEx/config/WhereDidIPutIt/history`. Keep that folder out of shared profiles and modpack exports. To erase a history, close Valheim and remove its files from that folder.
+The menu uses a wood and bronze frame with warm gold text.
 
-## Playing with other mods
+## 📍 Follow the marker
 
-Where Did I Put It? reads item lists instead of inventory slots or UI layouts. It supports expanded inventories and container sizes, with optional handling for Smoothbrain Backpacks, CurrencyPocket, EpicLoot names and MultiUserChest pending transfers.
+**Locate local** lasts **12 seconds** by default and works within **40 metres**. The chest or item must be loaded nearby and accessible. The marker follows moving cargo and dropped items, and stops if access is lost.
 
-With MultiUserChest, observations wait until pending transfers settle. If a future version changes the information needed to check transfers, live tracking pauses and your saved history remains available.
+**View map** highlights a location for **90 seconds**. It follows the current position when the chest or item is loaded nearby; otherwise it shows the last recorded location.
 
-Quick stacking, crafting from storage, recycling and automatic storage may produce general observed-change entries when the exact cause cannot be identified. Custom storage systems that do not expose ordinary inventories may not appear. It does not require Jotunn or any of these optional mods.
+**Both markers are private and temporary.** Selecting another location replaces the previous marker. View map is unavailable in no-map worlds, but Locate local still works.
 
-Both markers are private to your client and temporary. Locate local requires a nearby, loaded chest or item you can access; its default range is 40 metres. It follows moving cargo and dropped items, and stops when access is lost. Selecting another location replaces the previous marker. View map is unavailable in no-map worlds, while Locate local still works. Use client mods according to your server's rules.
+## 🕒 Remembered, not guaranteed
 
-## Removing the mod
+Storage results are **last-seen records**. Other players, automatic storage, moving boats, world resets and changes while you were offline can leave them out of date. Open a container again to refresh it.
 
-Close Valheim and remove the DLL or uninstall it through your mod manager. The mod does not add items or change world and character save formats. You may keep the local history folder for later use.
+The mod remembers containers you open or use through observed transfers, and refreshes known, accessible containers nearby. **It does not search unopened storage across the world.** History begins when you install the mod.
+
+A remembered location is **not proof of who moved an item**.
+
+### Dropped items
+
+Nearby dropped items appear as **Ground** locations. Their positions update as they roll or float, and your successful pickups remove their ground records.
+
+Other players, automatic stacking and despawning can leave old records. A recorded item may no longer be there. Ground records are kept for **up to one real day**, with a limit of **300**.
+
+## 🎨 Settings & personal history
+
+Change the shortcut, window scale, local ping duration, history limits and observation distance through a configuration manager or:
+
+`BepInEx/config/VariantMods.WhereDidIPutIt.cfg`
+
+Each character and world has its own local history, stored in:
+
+`BepInEx/config/WhereDidIPutIt/history`
+
+**Keep this history folder out of shared profiles and modpack exports.** To erase a history, close Valheim and remove its files from that folder.
+
+## 🧩 Playing with other mods
+
+Supports expanded inventories and container sizes by reading item lists rather than inventory slots or UI layouts.
+
+Optional handling includes **Smoothbrain Backpacks**, **CurrencyPocket**, **EpicLoot names** and **MultiUserChest pending transfers**. Neither Jotunn nor these optional mods is required.
+
+With MultiUserChest, observations wait for pending transfers to settle. If a future version changes the information needed to check them, live tracking pauses and your saved history remains available.
+
+Quick stacking, crafting from storage, recycling and automatic storage may appear as general observed changes when their exact cause cannot be identified. Custom storage that does not expose ordinary inventories may not appear.
+
+Use client mods according to your server's rules.
+
+## 🔄 Removing the mod
+
+Close Valheim and remove the DLL, or uninstall through your mod manager.
+
+The mod does not add items or change world and character save formats. You can keep your local history folder for later use.
